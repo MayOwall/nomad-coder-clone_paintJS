@@ -1,0 +1,93 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: aliceblue;
+}
+
+
+.header__title {
+    font-family: 'Sniglet', cursive;
+    padding: 2rem 0;
+
+    background: linear-gradient(to right bottom, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    text-align: center;
+}
+.canvas {
+    width: 70vh;
+    height: 50vh;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 0.2rem 0.5rem gray;
+}
+.control-pannel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+.control-pannel__btns {
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem;
+}
+.control-pannel__btns input {
+    font-family: 'Sniglet', cursive;
+    width: 5rem;
+    height: 2rem;
+    margin: 0 0.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.2rem gray;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    transition: transform 0.2s;
+}
+.control-pannel__btns input:active {
+    background-color: lightgray;
+    transform: scale(1.1);
+}
+.control-pannel__btns input:last-of-type {
+    margin-left: 3rem;
+    border: 2px solid gold;
+    color: rgb(255, 166, 0);
+    line-height: 1.8rem;
+}
+.control-pannel__brush-size {
+    width: 20rem;
+    margin: 1rem;
+}
+.control-pannel__brush-colors {
+    display: flex;
+    justify-content: center;
+}
+.control-pannel__brush-colors__color {
+    width: 3rem;
+    height: 3rem;
+    scale: 1;
+    margin: 0.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.1rem 0.2rem gray;
+    transition: transform 0.2s;
+}
+.control-pannel__brush-colors__color:active {
+    transform: scale(1.1);
+}
+
+.deactivated {
+    pointer-events: none;
+    opacity: 20%;
+}
