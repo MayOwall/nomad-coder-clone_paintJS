@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owall's paintJS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Owall's-NC-Clone-Coding_paintJS</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <canvas id="jsCanvas" class="canvas"></canvas>
-    <div class="controls">
-        <div class="controls__range">
-            <input type="range" id="jsRange" min="0.2" max="10.0" value="5.0" step="0.1">
-        </div>
-        <div class="controls__bts">
-            <button id="jsMode">Fill</button>
-            <button id="jsSave">Save</button>
-        </div>
-        <div class="controls__colors" id="jsColors">
-            <div class="controls__color jsColor" style="background-color:black"></div>
-            <div class="controls__color jsColor" style="background-color:white"></div>
-            <div class="controls__color jsColor" style="background-color:red"></div>
-            <div class="controls__color jsColor" style="background-color:orange"></div>
-            <div class="controls__color jsColor" style="background-color:yellow"></div>
-            <div class="controls__color jsColor" style="background-color:greenyellow"></div>
-            <div class="controls__color jsColor" style="background-color:skyblue"></div>
-            <div class="controls__color jsColor" style="background-color:blue"></div>
-            <div class="controls__color jsColor" style="background-color:purple"></div>
-        </div>
-    </div>
+    <header class="header">
+        <h1 class="header__title">welcome to<br> " OWALL'S PAINT CLASS!! "</h1>
+    </header>
+    <main>
+        <canvas id="jsCanvas" class="canvas"></canvas>
+        <section class="control-pannel">
+            <div class="control-pannel__btns">
+                <input id="jsBrushBtn" class="deactivated" type="button" value="BRUSH">
+                <input id="jsFillBtn" class="" type="button" value="FILL">
+                <input id="jsSaveBtn" type="button" value="SAVE">
+            </div>
+            <input id="jsBrushSize" class="control-pannel__brush-size" type="range" min="1" max="30" step="1" value="10">
+            <div class="control-pannel__brush-colors">
+                <div class="control-pannel__brush-colors__color" style="background-color:black;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:white;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:red;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:orange;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:yellow;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:greenyellow;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:skyblue;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:blue;"></div>
+                <div class="control-pannel__brush-colors__color" style="background-color:blueviolet;"></div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/canvas.js"></script>
 </body>
-<script src="app.js"></script>
-</html>.
+</html>
