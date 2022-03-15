@@ -5,6 +5,7 @@ const brushSize = document.getElementById('jsBrushSize');
 const brushColor = document.querySelectorAll('.control-pannel__brush-colors__color');
 const brushBtn = document.getElementById('jsBrushBtn');
 const fillBtn = document.getElementById('jsFillBtn');
+const saveBtn = document.getElementById('jsSaveBtn');
 
 canvas.width = width;
 canvas.height = height;
@@ -65,6 +66,14 @@ function fillBtnHandler() {
     paintmode = 'fill';
 };
 
+function saveBtnHandler() {
+    const image = canvas.toDataURL('image/jpg');
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'What a wonderful paint!!';
+    link.click();
+};
+
 if(canvas) {
     canvas.addEventListener("mousemove", mousemoveHandler);
     canvas.addEventListener("mousedown", startPainting);
@@ -83,5 +92,7 @@ if(brushBtn) {
 if(fillBtn) {
     fillBtn.addEventListener('click', fillBtnHandler);
 }
-//3. paint/brush버튼 누를때마다 fill, brush모드로 바꿔주기.
+if(saveBtn) {
+    saveBtn.addEventListener('click', saveBtnHandler);
+}
 //4. save하면 이미지 저장되도록 하기.d
